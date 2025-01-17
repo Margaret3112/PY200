@@ -7,6 +7,9 @@ class Coin:
         """
         self.denomination = denomination
 
+    def __add__(self, other):
+        return self.denomination + other.denomination
+
 
 class PiggyBank:
     def __init__(self):
@@ -22,15 +25,37 @@ class PiggyBank:
 
         :param coin: Объект Coin для добавления.
         """
-        ...  # TODO реализуйте метод как в описании
+          # TODO реализуйте метод как в описании
 
+
+        if self.is_broken:
+            raise ValueError("Копилка разбита. Нельзя добавить монеты.")
+        self.coins.append(coin)
     def break_piggy_bank(self):
         """
         Разбивает копилку и возвращает информацию о монетах.
 
         :return: Словарь, где ключ - номинал монеты, значение - количество монет этого номинала.
         """
-        ...  # TODO реализуйте метод как в описании
+        if self.is_broken is True:
+            raise ValueError("Копилка уже разбита.")
+
+        # sum(self.coins)
+        total_amount = sum(coin.denomination for coin in self.coins)
+        new_dict = {}
+
+        for coin in self.coins:
+            if coin.denomination in new_dict:
+                new_dict[coin.denomination] += 1
+            else:
+                new_dict[coin.denomination] = 1
+
+        self.coins = []
+        self.is_broken = True
+        return new_dict
+
+          # TODO реализуйте метод как в описании
+
 
 
 if __name__ == "__main__":
