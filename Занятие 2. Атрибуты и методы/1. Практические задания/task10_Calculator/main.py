@@ -1,6 +1,12 @@
 class Calculator:
+    @staticmethod
+    def add(a, b) -> int:
+        return a + b
     # TODO Написать статический метод add для сложения двух чисел
 
+    @staticmethod
+    def mul(a, b) -> int:
+        return a * b
     # TODO  Написать статический метод mul для умножения двух чисел
 
 

@@ -5,6 +5,7 @@ class Dog:
     def increment_total_dogs(cls, count=1):
         if count <= 0:  # Добавляем простую проверку
             raise ValueError("Ошибка: количество должно быть положительным")
+        cls.total_dogs += 1
         # TODO  Обновите классовый атрибут total_dogs
 
     def __init__(self, name):

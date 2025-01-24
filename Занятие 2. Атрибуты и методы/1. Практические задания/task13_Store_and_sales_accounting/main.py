@@ -7,8 +7,9 @@ class Product:
         total_products(число): Отслеживает общее количество товаров на складе.
         total_revenue(число): Хранит общую выручку от продаж.
     """
-    # TODO Создайте классовые атрибуты total_products (инициализируйте нулем) и total_revenue (инициализируйте нулем)
-
+        # TODO Создайте классовые атрибуты total_products (инициализируйте нулем) и total_revenue (инициализируйте нулем)
+    total_products = 0   #Отслеживает общее количество товаров на складе.
+    total_revenue = 0     # Хранит общую выручку от продаж.
     def __init__(self, name: str, price: int | float, quantity: int):
         """
         :param name: Название товара
@@ -22,10 +23,12 @@ class Product:
 
     @classmethod
     def add_value_to_total_revenue(cls, value):
+        cls.total_revenue += value
         # TODO Обновите значение классового атрибута total_revenue
 
     @classmethod
     def add_value_total_products(cls, value):
+        cls.total_products += value
         # TODO Обновите значение классового атрибута total_products
 
 
@@ -36,11 +39,16 @@ class Product:
         :param amount: Количество проданного товара
         :return:
         """
+        if amount > self.quantity:
+            raise ValueError
+        self.quantity -= amount
         # TODO Проверьте, что если запрашиваемого числа товара нет на складе, то вызывается ошибка ValueError
         # TODO Уменьшите количество товара на складе (self.quantity) на соответствующее значение (amount)
-        revenue = # TODO посчитайте выручку как количество проданного товара умноженное на цену товара
+        revenue = amount * self.price  # TODO посчитайте выручку как количество проданного товара умноженное на цену товара
         # TODO Добавить выручку (revenue) к классовой переменной отвечающей за общую выручку
         # TODO Уменьшите значение классовой переменной total_products, так как общее чмсор товаров изменилось
+        self.add_value_total_products(revenue)
+        self.add_value_to_total_revenue(-amount)
         print(f"Продано {amount} шт. товара {self.name}. Выручка: {revenue:.2f}")
 
     def restock(self, amount: int) -> None:
@@ -49,6 +57,8 @@ class Product:
         :param amount: Количество добавляемого товара
         :return:
         """
+        self.quantity += amount
+        self.add_value_total_products(amount)
         # TODO Увеличьте количество товара на складе (self.quantity) на соответствующее значение (amount)'
         # TODO Увеличьте общее число товаров total_products (классовый атрибут)
         print(f"Поступило {amount} шт. товара {self.name}. Всего на складе: {self.quantity}")
@@ -67,6 +77,7 @@ class Store:
         Возвращает общее количество всех товаров в магазине.
         :return:
         """
+        return Product.total_products
         # TODO Верните общее количество всех товаров в магазине.
 
     def total_value(self):
@@ -74,10 +85,16 @@ class Store:
         Возвращает общую стоимость всех товаров в магазине.
         :return:
         """
+        return [value for self.quantity ]
         # TODO Верните общую стоимость всех товаров в магазине.
 
     @staticmethod
     def compare_prices(product1: Product, product2: Product):
+        if product1.price > product2.price:
+            return product1.name
+        elif product1.price == product2.price:
+            return f"Цены одинаковы"
+        return product2.name
         # TODO Реализуйте сравнивание цен. Верните название товара с большей ценой, если одинаковые, то верните 'Цены одинаковы'.
 
 

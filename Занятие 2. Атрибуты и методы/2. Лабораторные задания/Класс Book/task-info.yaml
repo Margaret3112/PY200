@@ -9,36 +9,47 @@ files:
   - name: main.py
     visible: true
     placeholders:
-      - offset: 282
-        length: 26
+      - offset: 356
+        length: 22
         placeholder_text: "pass # TODO дописать метод"
         initial_state:
           length: 26
           offset: 282
         initialized_from_dependency: false
         encrypted_possible_answer: pass
-        selected: false
-        status: Unchecked
-      - offset: 341
-        length: 26
+        selected: true
+        status: Failed
+      - offset: 464
+        length: 22
         placeholder_text: "pass # TODO дописать метод"
         initial_state:
           length: 26
           offset: 341
         initialized_from_dependency: false
         encrypted_possible_answer: pass
-        selected: false
-        status: Unchecked
-      - offset: 401
-        length: 26
+        selected: true
+        status: Failed
+      - offset: 599
+        length: 22
         placeholder_text: "pass # TODO дописать метод"
         initial_state:
           length: 26
           offset: 401
         initialized_from_dependency: false
         encrypted_possible_answer: pass
-        selected: false
-        status: Unchecked
+        selected: true
+        status: Failed
     learner_created: false
-status: Unchecked
+status: Failed
+feedback:
+  message: Incorrect
+  time: "Fri, 24 Jan 2025 17:42:18 UTC"
+  expected: |
+    Книга "test_name_1"
+    Книга "test_name_2"
+    [Book(id_=1, name='test_name_1', pages=200), Book(id_=2, name='test_name_2', pages=400)]
+  actual: |2
+     Книга "Book"
+     Книга "Book"
+    [ Book(id_=<built-in function id>, name='test_name_1', pages=200),  Book(id_=<built-in function id>, name='test_name_2', pages=400)]
 record: -1
