@@ -93,7 +93,7 @@ files:
         encrypted_possible_answer: self.add_value_total_products(-amount)
         selected: true
         status: Failed
-      - offset: 2620
+      - offset: 2619
         length: 98
         placeholder_text: "# TODO Увеличьте количество товара на складе (self.quantity)\
       \ на соответствующее значение (amount)'"
@@ -102,9 +102,9 @@ files:
           offset: 2121
         initialized_from_dependency: false
         encrypted_possible_answer: self.quantity += amount
-        selected: false
+        selected: true
         status: Failed
-      - offset: 2727
+      - offset: 2726
         length: 71
         placeholder_text: "# TODO Увеличьте общее число товаров total_products (классо\
       вый атрибут)"
@@ -115,7 +115,7 @@ files:
         encrypted_possible_answer: self.add_value_total_products(amount)
         selected: false
         status: Failed
-      - offset: 3372
+      - offset: 3399
         length: 56
         placeholder_text: "# TODO Верните общее количество всех товаров в магазине."
         initial_state:
@@ -125,7 +125,7 @@ files:
         encrypted_possible_answer: return sum(product.quantity for product in self.products)
         selected: true
         status: Failed
-      - offset: 3608
+      - offset: 3675
         length: 55
         placeholder_text: "# TODO Верните общую стоимость всех товаров в магазине."
         initial_state:
@@ -136,7 +136,7 @@ files:
           in self.products)
         selected: true
         status: Failed
-      - offset: 3943
+      - offset: 4010
         length: 121
         placeholder_text: "# TODO Реализуйте сравнивание цен. Верните название товара\
       \ с большей ценой, если одинаковые, то верните 'Цены одинаковы'."
@@ -166,7 +166,7 @@ files:
 status: Failed
 feedback:
   message: Incorrect
-  time: "Fri, 24 Jan 2025 17:28:41 UTC"
+  time: "Fri, 24 Jan 2025 17:57:29 UTC"
   expected: |
     300
     435.0
@@ -177,10 +177,10 @@ feedback:
     390.0
   actual: |
     300
-    5.4
+    435.0
     Продано 30 шт. товара Apple. Выручка: 45.00
-    50.4
+    30
     Apple
     270
-    50.4
+    390.0
 record: -1

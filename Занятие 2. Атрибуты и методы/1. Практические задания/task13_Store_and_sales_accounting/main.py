@@ -48,7 +48,7 @@ class Product:
         # TODO Добавить выручку (revenue) к классовой переменной отвечающей за общую выручку
         # TODO Уменьшите значение классовой переменной total_products, так как общее чмсор товаров изменилось
         self.add_value_total_products(revenue)
-        self.add_value_to_total_revenue(-amount)
+        self.add_value_to_total_revenue(amount)
         print(f"Продано {amount} шт. товара {self.name}. Выручка: {revenue:.2f}")
 
     def restock(self, amount: int) -> None:
@@ -77,7 +77,7 @@ class Store:
         Возвращает общее количество всех товаров в магазине.
         :return:
         """
-        return Product.total_products
+        return sum(product.quantity for product in self.products)
         # TODO Верните общее количество всех товаров в магазине.
 
     def total_value(self):
@@ -85,7 +85,7 @@ class Store:
         Возвращает общую стоимость всех товаров в магазине.
         :return:
         """
-        return [value for self.quantity ]
+        return sum(product.quantity * product.price for product in self.products)
         # TODO Верните общую стоимость всех товаров в магазине.
 
     @staticmethod
