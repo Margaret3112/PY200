@@ -47,8 +47,8 @@ class Product:
         revenue = amount * self.price  # TODO посчитайте выручку как количество проданного товара умноженное на цену товара
         # TODO Добавить выручку (revenue) к классовой переменной отвечающей за общую выручку
         # TODO Уменьшите значение классовой переменной total_products, так как общее чмсор товаров изменилось
-        self.add_value_total_products(revenue)
-        self.add_value_to_total_revenue(amount)
+        self.add_value_total_products(-amount)
+        self.add_value_to_total_revenue(revenue)
         print(f"Продано {amount} шт. товара {self.name}. Выручка: {revenue:.2f}")
 
     def restock(self, amount: int) -> None:
