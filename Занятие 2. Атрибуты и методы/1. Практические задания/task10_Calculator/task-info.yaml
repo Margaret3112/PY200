@@ -3,7 +3,7 @@ files:
   - name: main.py
     visible: true
     placeholders:
-      - offset: 87
+      - offset: 22
         length: 61
         placeholder_text: "# TODO Написать статический метод add для сложения двух чис\
       ел"
@@ -17,7 +17,7 @@ files:
                   return a + b
         selected: false
         status: Solved
-      - offset: 219
+      - offset: 89
         length: 63
         placeholder_text: "# TODO  Написать статический метод mul для умножения двух ч\
       исел"
@@ -44,5 +44,5 @@ files:
 status: Solved
 feedback:
   message: Congratulations!
-  time: "Fri, 24 Jan 2025 16:35:08 UTC"
+  time: "Sun, 26 Jan 2025 19:10:14 UTC"
 record: -1

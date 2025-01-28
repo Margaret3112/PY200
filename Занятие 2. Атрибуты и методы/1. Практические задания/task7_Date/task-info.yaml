@@ -23,18 +23,18 @@ files:
                   self.year = year
         selected: false
         status: Solved
-      - offset: 455
-        length: 50
+      - offset: 227
+        length: 54
         placeholder_text: "... # TODO Реализуйте возвращение в формате DD/MM/YYYY"
         initial_state:
           length: 54
           offset: 227
         initialized_from_dependency: false
         encrypted_possible_answer: "return f\"{self.day:0>2}/{self.month:0>2}/{self.year:4}\""
-        selected: true
+        selected: false
         status: Solved
-      - offset: 616
-        length: 75
+      - offset: 315
+        length: 78
         placeholder_text: "... # TODO Реализуйте возвращение в формате Date(day=..., month=...,\
       \ year=...)"
         initial_state:
@@ -43,7 +43,7 @@ files:
         initialized_from_dependency: false
         encrypted_possible_answer: "return f\"{self.__class__.__name__}(day={self.day!r},\
       \ month={self.month!r}, year={self.year!r})\""
-        selected: true
+        selected: false
         status: Solved
     learner_created: false
   - name: __init__.py
@@ -58,5 +58,5 @@ files:
 status: Solved
 feedback:
   message: Congratulations!
-  time: "Fri, 24 Jan 2025 16:11:22 UTC"
+  time: "Sun, 26 Jan 2025 19:10:09 UTC"
 record: -1

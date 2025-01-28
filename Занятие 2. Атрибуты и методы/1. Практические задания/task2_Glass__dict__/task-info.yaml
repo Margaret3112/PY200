@@ -14,7 +14,7 @@ files:
         encrypted_possible_answer: print(self.__dict__)
         selected: false
         status: Solved
-      - offset: 392
+      - offset: 363
         length: 70
         placeholder_text: "# TODO Распечатайте словарь атрибутов экземпляра класса в к\
       онце метода"
@@ -35,5 +35,5 @@ files:
 status: Solved
 feedback:
   message: Congratulations!
-  time: "Fri, 24 Jan 2025 15:24:00 UTC"
+  time: "Sun, 26 Jan 2025 19:10:00 UTC"
 record: -1

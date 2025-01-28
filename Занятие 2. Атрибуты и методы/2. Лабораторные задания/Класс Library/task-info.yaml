@@ -20,37 +20,40 @@ files:
           class Book:
               ...
         selected: false
-        status: Unchecked
-      - offset: 586
-        length: 26
+        status: Solved
+      - offset: 947
+        length: 22
         placeholder_text: "pass # TODO дописать метод"
         initial_state:
           length: 26
           offset: 586
         initialized_from_dependency: false
         encrypted_possible_answer: pass
-        selected: false
-        status: Unchecked
-      - offset: 840
-        length: 26
+        selected: true
+        status: Solved
+      - offset: 1394
+        length: 22
         placeholder_text: "pass # TODO дописать метод"
         initial_state:
           length: 26
           offset: 840
         initialized_from_dependency: false
         encrypted_possible_answer: pass
-        selected: false
-        status: Unchecked
-      - offset: 1280
-        length: 26
+        selected: true
+        status: Solved
+      - offset: 2016
+        length: 22
         placeholder_text: "pass # TODO дописать метод"
         initial_state:
           length: 26
           offset: 1280
         initialized_from_dependency: false
         encrypted_possible_answer: pass
-        selected: false
-        status: Unchecked
+        selected: true
+        status: Solved
     learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Mon, 27 Jan 2025 18:33:30 UTC"
 record: -1

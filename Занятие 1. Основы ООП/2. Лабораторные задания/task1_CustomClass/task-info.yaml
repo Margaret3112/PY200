@@ -6,6 +6,12 @@ files:
   - name: __init__.py
     visible: false
     learner_created: false
+  - name: task2.py
+    visible: true
+    learner_created: true
+  - name: task3.py
+    visible: true
+    learner_created: true
 status: Solved
 record: -1
 post_submission_on_open: true

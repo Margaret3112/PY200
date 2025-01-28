@@ -3,7 +3,7 @@ files:
   - name: main.py
     visible: true
     placeholders:
-      - offset: 403
+      - offset: 321
         length: 84
         placeholder_text: "# TODO метод должен возвращать строку, которая содержит чел\
       овеко-читаемую информацию"
@@ -25,5 +25,5 @@ files:
 status: Solved
 feedback:
   message: Congratulations!
-  time: "Fri, 24 Jan 2025 15:30:39 UTC"
+  time: "Sun, 26 Jan 2025 19:10:05 UTC"
 record: -1
