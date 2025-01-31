@@ -40,6 +40,9 @@ files:
         selected: true
         status: Solved
     learner_created: false
+  - name: lab2/main2.py
+    visible: true
+    learner_created: true
 status: Solved
 feedback:
   message: Congratulations!
