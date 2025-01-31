@@ -29,14 +29,18 @@ class LibraryItem:
         """
         Проверка на соответствие типу str, иначе ошибка TypeError
         """
-        ...  # TODO реализуйте проверку
+        if not isinstance(title, str):
+            raise TypeError
+         # TODO реализуйте проверку
 
     @staticmethod
     def __validate_author(author: str):
         """
         Проверка на соответствие типу str или None, иначе ошибка TypeError
         """
-        ...  # TODO реализуйте проверку
+        if not isinstance(author, (str, None)):
+            raise TypeError
+          # TODO реализуйте проверку
 
     @staticmethod
     def __validate_publication_year(year: int):
@@ -44,7 +48,11 @@ class LibraryItem:
         Проверка на соответствие типу int или None, иначе ошибка TypeError
         Если значение отрицательное или 0, то ошибка ValueError
         """
-        ...  # TODO реализуйте проверку
+        if not isinstance(year, (int, None)):
+            raise TypeError
+        if year <= 0:
+            raise ValueError
+          # TODO реализуйте проверку
 
     def check_out(self):
         if not self.__is_checked_out:
@@ -60,12 +68,28 @@ class LibraryItem:
         else:
             raise ValueError(f"{self.__title} не было выдано.")
 
+
+    @property
+    def is_checked_out(self):
+        if self.__is_checked_out == True:
+            return "Выдано"
+        else:
+            return "Доступно"
     # TODO добавьте свойство is_checked_out (на чтение). Возвращает "Выдано" если is_checked_out=True, иначе "Доступно"
+    @property
+    def title(self):
+        return self.__title
 
-    # TODO добавьте свойство title (на чтение)
 
+     # TODO добавьте свойство title (на чтение)
+    @property
+    def author(self):
+        return self.__author
     # TODO добавьте свойство author (на чтение)
 
+    @property
+    def publication_year(self):
+        return self.__publication_year
     # TODO добавьте свойство publication_year (на чтение)
 
     def __str__(self):
@@ -84,6 +108,8 @@ class Book(LibraryItem):
         """
         genre - Жанр
         """
+        super().__init__(self, title: str, author: str | None = None, publication_year: int | None = None)
+
         # TODO Инициализируйте переменные от LibraryItem и добавьте новый приватный атрибут genre. Не забудьте, что нужна валидация перед записью
 
     @staticmethod

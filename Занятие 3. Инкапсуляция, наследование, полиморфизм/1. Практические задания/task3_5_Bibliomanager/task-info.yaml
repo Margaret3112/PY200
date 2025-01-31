@@ -3,8 +3,8 @@ files:
   - name: main.py
     visible: true
     placeholders:
-      - offset: 774
-        length: 31
+      - offset: 841
+        length: 27
         placeholder_text: "...  # TODO реализуйте проверку"
         initial_state:
           length: 31
@@ -13,10 +13,10 @@ files:
         encrypted_possible_answer: |-
           if not isinstance(title, str):
                       return TypeError()
-        selected: false
+        selected: true
         status: Unchecked
-      - offset: 972
-        length: 31
+      - offset: 1111
+        length: 28
         placeholder_text: "...  # TODO реализуйте проверку"
         initial_state:
           length: 31
@@ -25,10 +25,10 @@ files:
         encrypted_possible_answer: |-
           if not isinstance(author, (str, type(None))):
                       return TypeError()
-        selected: false
+        selected: true
         status: Unchecked
-      - offset: 1242
-        length: 31
+      - offset: 1503
+        length: 28
         placeholder_text: "...  # TODO реализуйте проверку"
         initial_state:
           length: 31
@@ -39,9 +39,9 @@ files:
                       return TypeError()
                   if not year > 0:
                       return ValueError()
-        selected: false
+        selected: true
         status: Unchecked
-      - offset: 1760
+      - offset: 2177
         length: 115
         placeholder_text: "# TODO добавьте свойство is_checked_out (на чтение). Возвра\
       щает \"Выдано\" если is_checked_out=True, иначе \"Доступно\""
@@ -55,7 +55,7 @@ files:
                   return "Выдано" if self.__is_checked_out else "Доступно"
         selected: false
         status: Unchecked
-      - offset: 1881
+      - offset: 2363
         length: 42
         placeholder_text: "# TODO добавьте свойство title (на чтение)"
         initial_state:
@@ -68,7 +68,7 @@ files:
                   return self.__title
         selected: false
         status: Unchecked
-      - offset: 1929
+      - offset: 2475
         length: 43
         placeholder_text: "# TODO добавьте свойство author (на чтение)"
         initial_state:
@@ -81,7 +81,7 @@ files:
                   return self.__author
         selected: false
         status: Unchecked
-      - offset: 1978
+      - offset: 2609
         length: 53
         placeholder_text: "# TODO добавьте свойство publication_year (на чтение)"
         initial_state:
@@ -94,7 +94,7 @@ files:
                   return self.__publication_year
         selected: false
         status: Unchecked
-      - offset: 2421
+      - offset: 3160
         length: 137
         placeholder_text: "# TODO Инициализируйте переменные от LibraryItem и добавьте\
       \ новый приватный атрибут genre. Не забудьте, что нужна валидация перед запи\
@@ -109,7 +109,7 @@ files:
                   self.__genre = genre
         selected: false
         status: Unchecked
-      - offset: 2714
+      - offset: 3453
         length: 36
         placeholder_text: "...  # TODO написать метод валидации"
         initial_state:
@@ -121,7 +121,7 @@ files:
                       raise TypeError()
         selected: false
         status: Unchecked
-      - offset: 2756
+      - offset: 3495
         length: 42
         placeholder_text: "# TODO добавьте свойство genre (на чтение)"
         initial_state:
@@ -134,7 +134,7 @@ files:
                   return self.__genre
         selected: false
         status: Unchecked
-      - offset: 2804
+      - offset: 3543
         length: 179
         placeholder_text: "# TODO  переопределите метод get_info, чтобы он отображал и\
       нформацию специфичную для книги (Книга: 'Название книги',  Автор: 'Кто напис\
@@ -148,7 +148,7 @@ files:
                   return f"Книга: '{self.title}', Автор: {self.author}, Жанр: {self.genre}, Год издания: {self.publication_year}"
         selected: false
         status: Unchecked
-      - offset: 3187
+      - offset: 3926
         length: 148
         placeholder_text: "... # TODO Инициализируйте переменные от LibraryItem и доба\
       вьте новый приватный атрибут issue_number. Не забудьте, что нужна валидация\
@@ -163,7 +163,7 @@ files:
                   self.__issue_number = issue_number
         selected: false
         status: Unchecked
-      - offset: 3505
+      - offset: 4244
         length: 36
         placeholder_text: "...  # TODO написать метод валидации"
         initial_state:
@@ -175,7 +175,7 @@ files:
                       raise TypeError()
         selected: false
         status: Unchecked
-      - offset: 3547
+      - offset: 4286
         length: 49
         placeholder_text: "# TODO добавьте свойство issue_number (на чтение)"
         initial_state:
@@ -188,7 +188,7 @@ files:
                   return self.__issue_number
         selected: false
         status: Unchecked
-      - offset: 3602
+      - offset: 4341
         length: 166
         placeholder_text: "# TODO  переопределите метод get_info, чтобы он отображал и\
       нформацию специфичную для журнала (Журнал: 'Название журнала',  Номер выпуск\
@@ -202,7 +202,7 @@ files:
                   return f"Журнал: '{self.title}', Номер выпуска: {self.issue_number}, Год издания: {self.publication_year}"
         selected: false
         status: Unchecked
-      - offset: 3842
+      - offset: 4581
         length: 152
         placeholder_text: "... # TODO Инициализируйте переменные от LibraryItem и доба\
       вьте новый приватный атрибут publication_date. Не забудьте, что нужна валида\
@@ -218,7 +218,7 @@ files:
                   self.__publication_date = publication_date
         selected: false
         status: Unchecked
-      - offset: 4464
+      - offset: 5203
         length: 36
         placeholder_text: "...  # TODO написать метод валидации"
         initial_state:
@@ -233,7 +233,7 @@ files:
                   datetime.date(day=int(date[0]), month=int(date[1]), year=int(date[2]))
         selected: false
         status: Unchecked
-      - offset: 4506
+      - offset: 5245
         length: 53
         placeholder_text: "# TODO добавьте свойство publication_date (на чтение)"
         initial_state:
@@ -246,7 +246,7 @@ files:
                   return self.__publication_date
         selected: false
         status: Unchecked
-      - offset: 4565
+      - offset: 5304
         length: 162
         placeholder_text: "# TODO  переопределите метод get_info, чтобы он отображал и\
       нформацию специфичную для газеты (Газета: 'Название газеты',  Дата выпуска:\

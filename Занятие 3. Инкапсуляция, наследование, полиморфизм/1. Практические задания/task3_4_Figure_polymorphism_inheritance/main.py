@@ -12,6 +12,14 @@ class Figure:
 class Rectangle(Figure):
     """ Производный класс. Прямоугольник. """
     # TODO определить конструктор
+    def __init__(self, a, b):
+        self.a = a
+        self.b = b
+
+
+    def area(self):
+        super().area()
+        return round(self.a * self.b, 3)
 
     # TODO перегрузить метод area, чтобы он возвращал площадь, но не терял родительский функционал
 
@@ -19,9 +27,16 @@ class Rectangle(Figure):
 class Circle(Figure):
     """ Производный класс. Круг. """
     # TODO определить конструктор
+    def __init__(self, a):
+        self.a = a
 
-    # TODO перегрузить метод area, чтобы он возвращал площадь,
-но не терял родительский функционал"
+    def area(self):
+        super().area()
+        s = math.pi * 5 * 5
+        return round(s, 3)
+
+    # TODO перегрузить метод area, чтобы он возвращал площадь, но не терял родительский функционал,
+
 
 
 if __name__ == "__main__":
