@@ -14,8 +14,8 @@ files:
           if not isinstance(title, str):
                       return TypeError()
         selected: true
-        status: Unchecked
-      - offset: 1111
+        status: Solved
+      - offset: 1117
         length: 28
         placeholder_text: "...  # TODO реализуйте проверку"
         initial_state:
@@ -26,8 +26,8 @@ files:
           if not isinstance(author, (str, type(None))):
                       return TypeError()
         selected: true
-        status: Unchecked
-      - offset: 1503
+        status: Solved
+      - offset: 1515
         length: 28
         placeholder_text: "...  # TODO реализуйте проверку"
         initial_state:
@@ -40,8 +40,8 @@ files:
                   if not year > 0:
                       return ValueError()
         selected: true
-        status: Unchecked
-      - offset: 2177
+        status: Solved
+      - offset: 2189
         length: 115
         placeholder_text: "# TODO добавьте свойство is_checked_out (на чтение). Возвра\
       щает \"Выдано\" если is_checked_out=True, иначе \"Доступно\""
@@ -54,8 +54,8 @@ files:
               def is_checked_out(self):
                   return "Выдано" if self.__is_checked_out else "Доступно"
         selected: false
-        status: Unchecked
-      - offset: 2363
+        status: Solved
+      - offset: 2375
         length: 42
         placeholder_text: "# TODO добавьте свойство title (на чтение)"
         initial_state:
@@ -67,8 +67,8 @@ files:
               def title(self):
                   return self.__title
         selected: false
-        status: Unchecked
-      - offset: 2475
+        status: Solved
+      - offset: 2487
         length: 43
         placeholder_text: "# TODO добавьте свойство author (на чтение)"
         initial_state:
@@ -79,9 +79,9 @@ files:
           @property
               def author(self):
                   return self.__author
-        selected: false
-        status: Unchecked
-      - offset: 2609
+        selected: true
+        status: Solved
+      - offset: 2621
         length: 53
         placeholder_text: "# TODO добавьте свойство publication_year (на чтение)"
         initial_state:
@@ -93,8 +93,8 @@ files:
               def publication_year(self):
                   return self.__publication_year
         selected: false
-        status: Unchecked
-      - offset: 3160
+        status: Solved
+      - offset: 3188
         length: 137
         placeholder_text: "# TODO Инициализируйте переменные от LibraryItem и добавьте\
       \ новый приватный атрибут genre. Не забудьте, что нужна валидация перед запи\
@@ -107,10 +107,10 @@ files:
           super().__init__(title, author, publication_year)
                   self.__validate_genre(genre)
                   self.__genre = genre
-        selected: false
-        status: Unchecked
-      - offset: 3453
-        length: 36
+        selected: true
+        status: Solved
+      - offset: 3757
+        length: 31
         placeholder_text: "...  # TODO написать метод валидации"
         initial_state:
           length: 36
@@ -119,9 +119,9 @@ files:
         encrypted_possible_answer: |-
           if not isinstance(genre, str):
                       raise TypeError()
-        selected: false
-        status: Unchecked
-      - offset: 3495
+        selected: true
+        status: Solved
+      - offset: 3794
         length: 42
         placeholder_text: "# TODO добавьте свойство genre (на чтение)"
         initial_state:
@@ -132,9 +132,9 @@ files:
           @property
               def genre(self):
                   return self.__genre
-        selected: false
-        status: Unchecked
-      - offset: 3543
+        selected: true
+        status: Solved
+      - offset: 3842
         length: 179
         placeholder_text: "# TODO  переопределите метод get_info, чтобы он отображал и\
       нформацию специфичную для книги (Книга: 'Название книги',  Автор: 'Кто напис\
@@ -146,10 +146,10 @@ files:
         encrypted_possible_answer: |-
           def get_info(self):
                   return f"Книга: '{self.title}', Автор: {self.author}, Жанр: {self.genre}, Год издания: {self.publication_year}"
-        selected: false
-        status: Unchecked
-      - offset: 3926
-        length: 148
+        selected: true
+        status: Solved
+      - offset: 4392
+        length: 145
         placeholder_text: "... # TODO Инициализируйте переменные от LibraryItem и доба\
       вьте новый приватный атрибут issue_number. Не забудьте, что нужна валидация\
       \ перед записью"
@@ -161,10 +161,10 @@ files:
           super().__init__(title=title, publication_year=publication_year)
                   self.__validate_issue_number(issue_number)
                   self.__issue_number = issue_number
-        selected: false
-        status: Unchecked
-      - offset: 4244
-        length: 36
+        selected: true
+        status: Solved
+      - offset: 5000
+        length: 33
         placeholder_text: "...  # TODO написать метод валидации"
         initial_state:
           length: 36
@@ -173,9 +173,9 @@ files:
         encrypted_possible_answer: |-
           if not isinstance(issue_number, int):
                       raise TypeError()
-        selected: false
-        status: Unchecked
-      - offset: 4286
+        selected: true
+        status: Solved
+      - offset: 5039
         length: 49
         placeholder_text: "# TODO добавьте свойство issue_number (на чтение)"
         initial_state:
@@ -187,8 +187,8 @@ files:
               def issue_number(self):
                   return self.__issue_number
         selected: false
-        status: Unchecked
-      - offset: 4341
+        status: Solved
+      - offset: 5094
         length: 166
         placeholder_text: "# TODO  переопределите метод get_info, чтобы он отображал и\
       нформацию специфичную для журнала (Журнал: 'Название журнала',  Номер выпуск\
@@ -200,10 +200,10 @@ files:
         encrypted_possible_answer: |-
           def get_info(self):
                   return f"Журнал: '{self.title}', Номер выпуска: {self.issue_number}, Год издания: {self.publication_year}"
-        selected: false
-        status: Unchecked
-      - offset: 4581
-        length: 152
+        selected: true
+        status: Solved
+      - offset: 5622
+        length: 149
         placeholder_text: "... # TODO Инициализируйте переменные от LibraryItem и доба\
       вьте новый приватный атрибут publication_date. Не забудьте, что нужна валида\
       ция перед записью"
@@ -216,10 +216,10 @@ files:
                   super().__init__(title=title, publication_year=publication_year)
                   self.__validate_publication_date(publication_date)
                   self.__publication_date = publication_date
-        selected: false
-        status: Unchecked
-      - offset: 5203
-        length: 36
+        selected: true
+        status: Solved
+      - offset: 6721
+        length: 31
         placeholder_text: "...  # TODO написать метод валидации"
         initial_state:
           length: 36
@@ -231,9 +231,9 @@ files:
                   if not len(date := publication_date.split('.')) == 3:
                       raise ValueError()
                   datetime.date(day=int(date[0]), month=int(date[1]), year=int(date[2]))
-        selected: false
-        status: Unchecked
-      - offset: 5245
+        selected: true
+        status: Solved
+      - offset: 6758
         length: 53
         placeholder_text: "# TODO добавьте свойство publication_date (на чтение)"
         initial_state:
@@ -245,8 +245,8 @@ files:
               def publication_date(self):
                   return self.__publication_date
         selected: false
-        status: Unchecked
-      - offset: 5304
+        status: Solved
+      - offset: 6817
         length: 162
         placeholder_text: "# TODO  переопределите метод get_info, чтобы он отображал и\
       нформацию специфичную для газеты (Газета: 'Название газеты',  Дата выпуска:\
@@ -259,7 +259,7 @@ files:
           def get_info(self):
                   return f"Газета: '{self.title}', Дата выпуска: {self.publication_date}, Год издания: {self.publication_year}"
         selected: false
-        status: Unchecked
+        status: Solved
     learner_created: false
   - name: __init__.py
     visible: false
@@ -273,5 +273,8 @@ files:
   - name: library_items.json
     visible: true
     learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Fri, 07 Feb 2025 17:29:14 UTC"
 record: -1

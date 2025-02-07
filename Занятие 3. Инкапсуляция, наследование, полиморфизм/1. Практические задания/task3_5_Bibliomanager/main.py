@@ -38,7 +38,7 @@ class LibraryItem:
         """
         Проверка на соответствие типу str или None, иначе ошибка TypeError
         """
-        if not isinstance(author, (str, None)):
+        if not isinstance(author, (str, type(None))):
             raise TypeError
           # TODO реализуйте проверку
 
@@ -48,7 +48,7 @@ class LibraryItem:
         Проверка на соответствие типу int или None, иначе ошибка TypeError
         Если значение отрицательное или 0, то ошибка ValueError
         """
-        if not isinstance(year, (int, None)):
+        if not isinstance(year, (int, type(None))):
             raise TypeError
         if year <= 0:
             raise ValueError
@@ -108,8 +108,9 @@ class Book(LibraryItem):
         """
         genre - Жанр
         """
-        super().__init__(self, title: str, author: str | None = None, publication_year: int | None = None)
-
+        super().__init__(title, author, publication_year)
+        self.__validate_genre(genre)
+        self.__genre = genre
         # TODO Инициализируйте переменные от LibraryItem и добавьте новый приватный атрибут genre. Не забудьте, что нужна валидация перед записью
 
     @staticmethod
@@ -117,7 +118,17 @@ class Book(LibraryItem):
         """
         Проверка на соответствие типу str, иначе ошибка TypeError
         """
-        ...  # TODO написать метод валидации
+        if not isinstance(genre,str):
+            raise TypeError
+
+
+    @property
+    def genre(self):
+        return self.__genre
+
+    def get_info(self):
+        return f"Книга: '{self.title}', Автор: {self.author}, Жанр: {self.genre}, Год издания: {self.publication_year}"
+        # TODO написать метод валидации
 
     # TODO добавьте свойство genre (на чтение)
 
@@ -133,14 +144,26 @@ class Magazine(LibraryItem):
         """
         issue_number - Номер выпуска
         """
-        ... # TODO Инициализируйте переменные от LibraryItem и добавьте новый приватный атрибут issue_number. Не забудьте, что нужна валидация перед записью
+        super().__init__(title=title, publication_year=publication_year)
+        self.__validate_issue_number(issue_number)
+        self.__issue_number = issue_number
+         # TODO Инициализируйте переменные от LibraryItem и добавьте новый приватный атрибут issue_number. Не забудьте, что нужна валидация перед записью
 
     @staticmethod
     def __validate_issue_number(issue_number: int):
         """
         Проверка на соответствие типу int, иначе ошибка TypeError
         """
-        ...  # TODO написать метод валидации
+        if not isinstance(issue_number, int):
+            raise TypeError
+
+    @property
+    def issue_number(self):
+        return self.__issue_number
+
+    def get_info(self):
+         return f"Журнал: '{self.title}', Номер выпуска: {self.issue_number}, Год издания: {self.publication_year}"
+          # TODO написать метод валидации
 
     # TODO добавьте свойство issue_number (на чтение)
 
@@ -151,8 +174,11 @@ class Newspaper(LibraryItem):
     """
     Класс для газет
     """
-
-    ... # TODO Инициализируйте переменные от LibraryItem и добавьте новый приватный атрибут publication_date. Не забудьте, что нужна валидация перед записью
+    def __init__(self, title: str, publication_date: str, author: str | None = None, publication_year: int | None = None):
+        super().__init__(title, author, publication_year)
+        self.__validate_publication_date(publication_date)
+        self.__publication_date=publication_date
+     # TODO Инициализируйте переменные от LibraryItem и добавьте новый приватный атрибут publication_date. Не забудьте, что нужна валидация перед записью
 
     @staticmethod
     def __validate_publication_date(publication_date: str):
@@ -162,7 +188,20 @@ class Newspaper(LibraryItem):
         Проверка, что вообще дата существует в календаре (можно использовать datetime.date(day=1, month=1, year=2020),
             если не будет ошибок значит дата корректная)
         """
-        ...  # TODO написать метод валидации
+        if not isinstance(publication_date, str):
+            raise TypeError
+        if not len(date := publication_date.split('.')) == 3:
+            raise ValueError()
+        datetime.date(day=int(date[0]), month=int(date[1]), year=int(date[2]))
+
+    @property
+    def publication_date(self):
+        return self.__publication_date
+
+    def get_info(self):
+        return f"Газета: '{self.title}', Дата выпуска: {self.publication_date}, Год издания: {self.publication_year}"
+
+        # TODO написать метод валидации
 
     # TODO добавьте свойство publication_date (на чтение)
 

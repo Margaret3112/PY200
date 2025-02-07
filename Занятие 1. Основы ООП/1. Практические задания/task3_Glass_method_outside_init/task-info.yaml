@@ -36,7 +36,7 @@ files:
                   if not capacity_volume > 0:
                       raise ValueError
                   self.capacity_volume = capacity_volume  # объем стакана
-        selected: false
+        selected: true
         status: Solved
       - offset: 1176
         length: 89
